@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(49, 49, 49);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(158, 158, 158);
+    border-radius: 0.3rem;
+}
+
+.display_none {
+    display: none;
+}
+
+body,
+html {
+    /* display: flex; */
+    height: 100%;
+}
+
+.main_container {
+    display: flex;
+    height: 100vh;
+}
+
+.left_container {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    width: 25%;
+}
+
+.left_upper {
+    display: flex;
+    width: 100%;
+    padding: 0.8rem 0.4rem;
+    background-color: rgb(41, 41, 41);
+}
+
+.add_list_btn_container {
+    height: 100%;
+    margin-right: 0.3rem;
+}
+
+.add_list_btn {
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border-style: none;
+    border-radius: 0.4rem;
+    border: 1px solid rgba(124, 124, 124, 0.596);
+}
+
+.add_list_btn:hover {
+    border-style: none;
+    background-color: rgb(128, 128, 128);
+    filter: invert(100%);
+    cursor: pointer;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+.add_list_img {
+    height: 2rem;
+    width: 2rem;
+    filter: invert(80%);
+    transition: transform 0.5s;
+}
+
+.add_list_img:hover {
+    transform: rotate(-90deg);
+}
+
+.add_list_input_container {
+    height: 100%;
+    width: 100%;
+}
+
+.add_list_text {
+    color: antiquewhite;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+.add_list_input {
+    height: 2.5rem;
+    width: 100%;
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
+    background-color: rgb(63, 63, 63);
+    border-style: none;
+    opacity: 0.9;
+    border: 2px solid rgb(80, 80, 80);
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.left_lower {
+    background-color: rgb(49, 49, 49);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.list_container {
+    display: flex;
+    /* border: 2px solid blue; */
+    margin-top: 0.5rem;
+    padding-inline: 0.7rem;
+    color: white;
+    /* padding-block: 1.2rem; */
+    cursor: pointer;
+    margin-left: 0.2rem;
+    border-bottom: 1px solid rgb(71, 71, 71);
+    border-top: 1px solid rgb(71, 71, 71);
+}
+
+.list_container:hover {
+    background-color: rgb(66, 66, 66);
+    margin-left: 0.2rem;
+}
+
+.list_name {
+    display: flex;
+    color: white;
+    font-size: 1.2rem;
+    align-items: center;
+    width: 100%;
+    padding-block: 1.2rem;
+}
+
+.remove_list_container {
+    display: flex;
+    align-items: center;
+}
+
+.remove_list_btn {
+    background-color: transparent;
+    filter: invert(100%);
+    border-style: none;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.remove_list_btn:hover {
+    filter: invert(60%);
+}
+
+.remove_list_img {
+    height: 1.7rem;
+}
+
+.right_container {
+    width: 75%;
+    background-color: rgb(61, 61, 61);
+    border-left: 2px solid rgb(39, 39, 39);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.add_dos_container {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.add_dos_input {
+    width: 100%;
+}
+
+.dos_input {
+    height: 2.5rem;
+    width: 98.4%;
+    background-color: rgb(43, 43, 43);
+    border-style: none;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    color: white;
+    padding-inline: 1rem;
+    border: 1px solid black;
+}
+
+.add_dos_btn_container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.add_dos_btn {
+    background-color: rgb(43, 43, 43);
+    border-radius: 3.2rem;
+}
+
+.add_dos_btn_img {
+    height: 3.2rem;
+    width: 3.2rem;
+}
+
+.dos_container {
+    display: flex;
+    align-items: center;
+    margin-inline: 1rem;
+    margin-block: 0.5rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-inline: 0.7rem;
+    background-color: rgb(68, 68, 68);
+    padding-block: 0.6rem;
+    cursor: pointer;
+}
+
+.dos_container:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.dos_name {
+    width: 100%;
+    opacity: 1;
+    font-size: 1.3rem;
+}
+
+.remove_dos_btn {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    border-style: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remove_dos_btn:hover {
+    filter: invert(60%);
+}
+
+.remove_dos_img {
+    height: 2rem;
+}
