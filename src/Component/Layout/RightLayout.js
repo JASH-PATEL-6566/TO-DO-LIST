@@ -53,7 +53,7 @@ const RightLayout = (props) => {
                     </form>
                 </div>
                 <div className="add_dos_btn_container">
-                    <button type='submit' onSubmit={handleSubmitDos} className="add_dos_btn">
+                    <button type='submit' onClick={handleSubmitDos} className="add_dos_btn">
                         <img className="add_dos_btn_img" src={add} alt="add" />
                     </button>
                 </div>

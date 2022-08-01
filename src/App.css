@@ -199,6 +199,10 @@ html {
     border-radius: 3.2rem;
 }
 
+.add_dos_btn:hover {
+    cursor: pointer;
+}
+
 .add_dos_btn_img {
     height: 3.2rem;
     width: 3.2rem;
