@@ -1,4 +1,4 @@
-import React, { useState, useRef, useReducer } from 'react'
+import React, { useState, useRef } from 'react'
 import plus_image from "../../Images/plus.png";
 import delete_image from '../../Images/delete.png'
 

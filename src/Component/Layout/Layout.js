@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState, useRef } from 'react';
+import React, { useReducer, useState, useRef } from 'react';
 import LeftLayout from './LeftLayout';
 import RightLayout from './RightLayout';
 import reducerForList from './reducerForList';
