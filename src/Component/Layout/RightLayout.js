@@ -6,6 +6,7 @@ import remove from '../../Images/delete.png'
 const RightLayout = (props) => {
     const [dos, setDos] = useState('');
 
+
     const handleSubmitDos = (e) => {
         e.preventDefault();
 
@@ -48,7 +49,7 @@ const RightLayout = (props) => {
             <div className="add_dos_container">
                 <div className="add_dos_input">
                     <form onSubmit={handleSubmitDos}>
-                        <input type="text" value={dos} className='dos_input' onChange={(e) => setDos(e.target.value)} />
+                        <input type="text" value={dos} ref={props.input_dos} className='dos_input' onChange={(e) => setDos(e.target.value)} />
                     </form>
                 </div>
                 <div className="add_dos_btn_container">

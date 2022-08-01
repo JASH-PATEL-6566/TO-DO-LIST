@@ -10,8 +10,14 @@ const reducerForList = (state, action) => {
     }
     else if (action.type === 'REMOVE_LIST') {
         const newList = state.list.filter(item => item.id !== action.payload)
+        if (newList.length === 0) {
+            return { active: '', list: [] }
+        }
+        const newActive = newList[newList.length - 1].id;
+
         return {
             ...state,
+            active: newActive,
             list: newList
         }
     }
@@ -26,6 +32,7 @@ const reducerForList = (state, action) => {
         // console.log(activeToDo);
         let ans;
         const final = state.list.map(item => {
+            ans = item;
             if (item.id === state.active) {
                 const { toDos } = item
                 const finalTodos = [...toDos, activeToDo]
@@ -41,6 +48,7 @@ const reducerForList = (state, action) => {
         // console.log(activeToDo);
         let ans;
         const final = state.list.map(item => {
+            ans = item;
             if (item.id === listId) {
                 const { toDos } = item
                 const finalTodos = toDos.filter(item => item.id !== todoId)

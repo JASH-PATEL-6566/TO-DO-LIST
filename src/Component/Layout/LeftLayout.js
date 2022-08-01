@@ -1,11 +1,10 @@
 import React, { useState, useRef, useReducer } from 'react'
 import plus_image from "../../Images/plus.png";
 import delete_image from '../../Images/delete.png'
-import reducerForList from './reducerForList';
 
 const LeftLayout = (props) => {
     const [name, setName] = useState('');
-    const input_ref = useRef();
+    const input_ref = useRef(null);
 
     const handleListName = (e) => {
         e.preventDefault();
@@ -20,6 +19,7 @@ const LeftLayout = (props) => {
         // for make value of input false
         input_ref.current.classList.toggle('display_none');
         document.querySelector('.add_list_text').classList.toggle('display_none');
+        props.input_dos.current.focus();
     }
 
     const handlePlusClick = (e) => {
