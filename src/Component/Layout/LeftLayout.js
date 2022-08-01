@@ -2,21 +2,10 @@ import React, { useState, useRef, useReducer } from 'react'
 import plus_image from "../../Images/plus.png";
 import delete_image from '../../Images/delete.png'
 import reducerForList from './reducerForList';
-// import { list } from './list'
-
-// const defaultState = {
-
-// };
-
-// export let list = [];
 
 const LeftLayout = (props) => {
     const [name, setName] = useState('');
     const input_ref = useRef();
-    // const [state, dispatch] = useReducer(reducerForList, props.defaultState);
-
-    // list = state;
-    // console.log(list)
 
     const handleListName = (e) => {
         e.preventDefault();
@@ -24,7 +13,7 @@ const LeftLayout = (props) => {
         const newList = {
             id: new Date().getTime().toString(),
             name,
-            toDos: [{ id: 123, name: 'jash' }, { id: 1234, name: 'viral' }],
+            toDos: []
         }
         props.dispatch({ type: 'ADD_LIST', payload: newList });
 

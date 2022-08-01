@@ -11,11 +11,11 @@ const RightLayout = (props) => {
 
         const newDo = {
             id: new Date().getTime().toString(),
-            dos,
+            name: dos,
         }
 
         props.dispatch({ type: 'ADD_DO', payload: newDo })
-
+        setDos('');
     }
 
     const DoElement = () => {
