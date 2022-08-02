@@ -16,9 +16,10 @@ const RightLayout = (props) => {
                 if (item.id === props.state.active) {
                     setName(item.name)
                 }
+                return item;
             })
         }
-    }, [props.state.active])
+    }, [props.state.active, props.state.list])
 
     const handleSubmitDos = (e) => {
         e.preventDefault();
