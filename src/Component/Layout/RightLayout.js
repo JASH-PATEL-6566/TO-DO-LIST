@@ -1,11 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import add from '../../Images/plus.png'
 import remove from '../../Images/delete.png'
 
 
 const RightLayout = (props) => {
     const [dos, setDos] = useState('');
+    const [name, setName] = useState('');
 
+    useEffect(() => {
+        if (props.state.list.length === 0) {
+            setName('')
+        }
+        if (props.state.active) {
+            props.state.list.map(item => {
+                if (item.id === props.state.active) {
+                    setName(item.name)
+                }
+            })
+        }
+    }, [props.state.active])
 
     const handleSubmitDos = (e) => {
         e.preventDefault();
@@ -45,7 +58,7 @@ const RightLayout = (props) => {
     }
 
     return (
-        <>
+        props.state.list.length ? <>
             <div className="add_dos_container">
                 <div className="add_dos_input">
                     <form onSubmit={handleSubmitDos}>
@@ -59,10 +72,19 @@ const RightLayout = (props) => {
                 </div>
 
             </div>
+            <div className="main_dos_container">
+                <DoElement />
+            </div>
 
-            <DoElement />
-
-        </>
+            <div className="add_dos_inner_container">
+                <h2 className='add_dos_inner_text'>{name}</h2>
+            </div>
+        </> :
+            <>
+                <div className="inner-container">
+                    <h1>No List is select yet</h1>
+                </div>
+            </>
     )
 }
 

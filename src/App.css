@@ -208,6 +208,11 @@ html {
     width: 3.2rem;
 }
 
+.main_dos_container {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
 .dos_container {
     display: flex;
     align-items: center;
@@ -246,4 +251,23 @@ html {
 
 .remove_dos_img {
     height: 2rem;
+}
+
+.inner-container {
+    margin: auto;
+    color: rgb(26, 26, 26);
+}
+.add_dos_inner_container {
+    /* border: 2px solid red; */
+    margin-bottom: auto;
+}
+
+.add_dos_inner_text {
+    color: rgb(29, 29, 29);
+    font-size: 2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.7rem;
+    margin-left: 0.5rem;
+    padding-left: 1.2rem;
+    padding-top: 0.6rem;
 }
