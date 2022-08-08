@@ -40,7 +40,6 @@ const reducerForList = (state, action) => {
             }
             return ans;
         })
-
         return { ...state, list: final };
     }
     else if (action.type === 'REMOVE_TODO') {

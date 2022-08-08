@@ -24,13 +24,14 @@ const RightLayout = (props) => {
     const handleSubmitDos = (e) => {
         e.preventDefault();
 
-        const newDo = {
-            id: new Date().getTime().toString(),
-            name: dos,
+        if (dos) {
+            const newDo = {
+                id: new Date().getTime().toString(),
+                name: dos,
+            }
+            props.dispatch({ type: 'ADD_DO', payload: newDo })
+            setDos('');
         }
-
-        props.dispatch({ type: 'ADD_DO', payload: newDo })
-        setDos('');
     }
 
     const DoElement = () => {
