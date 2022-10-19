@@ -64,7 +64,7 @@ const RightLayout = ({ setActive, active }) => {
                                 {item.name}
                                 {/* jash */}
                             </div>
-                            <div className="remove_dos_container">
+                            <div className="remove_dos_container display_none">
                                 <button className='remove_dos_btn'>
                                     <img className='remove_dos_img' src={remove} alt="remove" id={item._id} onClick={(e) => handleDeleteTodo(e.target.getAttribute('id'))} />
                                 </button>

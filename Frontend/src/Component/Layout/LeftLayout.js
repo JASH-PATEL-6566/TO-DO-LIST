@@ -79,7 +79,7 @@ const LeftLayout = ({ setActive }) => {
                             }}>
                                 {name}
                             </div>
-                            <div className="remove_list_container">
+                            <div className="remove_list_container display_none">
                                 <button
                                     className='remove_list_btn'>
                                     <img src={delete_image} className="remove_list_img" alt="delete" id={_id} onClick={(e) => delete_list(e.target.getAttribute('id'))} />

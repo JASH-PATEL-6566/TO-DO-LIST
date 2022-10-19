@@ -156,7 +156,7 @@ html {
 }
 
 .remove_list_img {
-    height: 1.7rem;
+    height: 1.5rem;
 }
 
 .right_container {
@@ -261,7 +261,7 @@ html {
 }
 
 .remove_dos_img {
-    height: 2rem;
+    height: 1.5rem;
 }
 
 .inner-container {
@@ -281,4 +281,18 @@ html {
     margin-left: 0.5rem;
     padding-left: 1.2rem;
     padding-top: 0.6rem;
+}
+
+.display_none {
+    display: none;
+}
+
+.list_container:hover .remove_list_container {
+    display: block;
+    margin: auto;
+}
+
+.dos_container:hover .remove_dos_container {
+    display: block;
+    margin: auto;
 }
